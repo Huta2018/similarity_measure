@@ -29,7 +29,7 @@ class similarityMeasure:
         similarity_coeff = self.dot_product / (np.linalg.norm(self.firstVector)* np.linalg.norm(self.secondVector))
         return similarity_coeff
     
-    def calculate_cosine_root_in_zierrman_paper(self):
+    def calculate_cosine_root(self):
         cosine_sim = np.sqrt(self.dot_product)
         return cosine_sim
     
