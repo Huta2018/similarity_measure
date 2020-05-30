@@ -20,7 +20,9 @@ class similarityMeasure:
         if self.denominator ==0:
             #print("denominator is zero, select different vector")
             return None
-    
+    """
+	calculate Tanimoto coefficient as the similarity measure
+    """    
     def calculate_TanimotoCoefficient(self):
         similarity_coeff = self.dot_product / self.denominator
         return similarity_coeff
