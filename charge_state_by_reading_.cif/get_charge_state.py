@@ -36,7 +36,12 @@ for lines in file:
                 y = val.get_valences(structure_from_cif)
                 z = structure_from_cif.atomic_numbers
                 comp = structure_from_cif.composition
-                element_in_comp = [ str(i) for i in comp]
+                element_in_comp = structure_from_cif.species
+                element_in_comp = [str(element_in_comp[i])+str(i) for i in range(len(element_in_comp))]
+	        #if you want to get all the elements at the output one can do
+                #element_in_comp=[str(element_in_comp[i])+str(i) for i in range(len(element_in_comp))]
+
+                #element_in_comp = [ str(i) for i in comp]
                 
                 for k, v in zip(element_in_comp, y):
                         charge_state_dict[str(line)][k] = v
